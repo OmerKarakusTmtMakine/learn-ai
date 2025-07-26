@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Güzel 100 Yapay Zeka Prompt'u (made by gemini)</title>
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Başlık Alanı */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Ana İçerik Alanı */
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        /* Prompt Kartları */
+        .prompt-kapsayici {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .prompt-kart {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .prompt-kart p {
+            margin: 0 0 10px 0;
+            font-size: 0.95em;
+            color: #555;
+            word-wrap: break-word; /* Uzun kelimeleri kırmak için */
+        }
+
+        .prompt-kart button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.2s ease;
+            align-self: flex-end; /* Butonu sağ alta hizala */
+        }
+
+        .prompt-kart button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Duyuru Mesajı - Kaldırıldı çünkü artık 100 prompt var */
+        /* .duyuru-mesaji {
+            text-align: center;
+            padding: 20px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+        } */
+
+        /* Responsive Ayarlar */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            .prompt-kapsayici {
+                grid-template-columns: 1fr; /* Küçük ekranlarda tek sütun */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌟 En Güzel 100 Yapay Zeka Prompt'u (made by gemini)🌟</h1>
+        <p>Yaratıcılığını ateşle, yapay zekadan en iyi çıktıyı al!</p>
+    </header>
+
+    <main>
+        <h2>✨ Yaratıcı Yazım & Hikaye Anlatımı (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Post-apokaliptik bir dünyada hayatta kalmaya çalışan son kütüphanecinin hikayesini yaz. Kaybettiği ne?</p>
+                <button onclick="kopyala('Post-apokaliptik bir dünyada hayatta kalmaya çalışan son kütüphanecinin hikayesini yaz. Kaybettiği ne?')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir zaman yolcusunun yanlışlıkla Antik Roma'ya düşüşünü ve modern teknolojiyi kullanarak hayatta kalma mücadelesini anlatan bir kısa hikaye taslağı oluştur.</p>
+                <button onclick="kopyala('Bir zaman yolcusunun yanlışlıkla Antik Roma\'ya düşüşünü ve modern teknolojiyi kullanarak hayatta kalma mücadelesini anlatan bir kısa hikaye taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sadece bitkilerle iletişim kurabilen bir çocuğun fantastik maceralarını anlatan bir çocuk kitabı özeti yaz.</p>
+                <button onclick="kopyala('Sadece bitkilerle iletişim kurabilen bir çocuğun fantastik maceralarını anlatan bir çocuk kitabı özeti yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir dedektif romanı için kışın karlı bir kasabada geçen, esrarengiz bir kayboluşu konu alan ilk bölümü kaleme al.</p>
+                <button onclick="kopyala('Bir dedektif romanı için kışın karlı bir kasabada geçen, esrarengiz bir kayboluşu konu alan ilk bölümü kaleme al.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gelecekte, rüyaların kaydedilip satıldığı bir dünyada, bir rüya hırsızının hikayesini anlat.</p>
+                <button onclick="kopyala('Gelecekte, rüyaların kaydedilip satıldığı bir dünyada, bir rüya hırsızının hikayesini anlat.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Ünlü bir sanat eserinin gizemli kayboluşunu ve onu arayan bir ekibin maceralarını anlatan bir film senaryosu taslağı oluştur.</p>
+                <button onclick="kopyala('Ünlü bir sanat eserinin gizemli kayboluşunu ve onu arayan bir ekibin maceralarını anlatan bir film senaryosu taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>İnsanlığın yeni bir gezegene göçünü ve orada karşılaştıkları bilinmeyen yaşam formlarıyla ilk temaslarını konu alan bir bilim kurgu hikayesi yaz.</p>
+                <button onclick="kopyala('İnsanlığın yeni bir gezegene göçünü ve orada karşılaştıkları bilinmeyen yaşam formlarıyla ilk temaslarını konu alan bir bilim kurgu hikayesi yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Tarihi bir olayı (örneğin İstanbul'un fethi) modern bir perspektiften, sosyal medya postları ve haber başlıklarıyla yeniden anlat.</p>
+                <button onclick="kopyala('Tarihi bir olayı (örneğin İstanbul\'un fethi) modern bir perspektiften, sosyal medya postları ve haber başlıklarıyla yeniden anlat.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir sihirli anahtarın sahiplerine dileklerini yerine getirdiği, ancak her dileğin beklenmedik bir bedeli olduğu bir masal yaz.</p>
+                <button onclick="kopyala('Bir sihirli anahtarın sahiplerine dileklerini yerine getirdiği, ancak her dileğin beklenmedik bir bedeli olduğu bir masal yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sıradan bir kahve dükkanında gerçekleşen, müşterilerin hayatlarını değiştiren sıradışı bir olayı konu alan bir kısa öykü.</p>
+                <button onclick="kopyala('Sıradan bir kahve dükkanında gerçekleşen, müşterilerin hayatlarını değiştiren sıradışı bir olayı konu alan bir kısa öykü.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir şairin, kaybolan ilham perisini bulmak için çıktığı fantastik bir yolculuğu anlatan bir şiir taslağı oluştur.</p>
+                <button onclick="kopyala('Bir şairin, kaybolan ilham perisini bulmak için çıktığı fantastik bir yolculuğu anlatan bir şiir taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Dünyanın sonunu getiren ama kimsenin farkında olmadığı bir olayı ve bunu durdurmaya çalışan sıradan bir kahramanı anlat.</p>
+                <button onclick="kopyala('Dünyanın sonunu getiren ama kimsenin farkında olmadığı bir olayı ve bunu durdurmaya çalışan sıradan bir kahramanı anlat.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir yapay zeka sanatçısının, insan duygularını öğrenerek gerçek şaheserler yaratma yolculuğunu konu alan bir hikaye taslağı.</p>
+                <button onclick="kopyala('Bir yapay zeka sanatçısının, insan duygularını öğrenerek gerçek şaheserler yaratma yolculuğunu konu alan bir hikaye taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Terk edilmiş bir lunaparkta geçen bir korku hikayesi için kısa bir giriş ve atmosfer tanımı yap.</p>
+                <button onclick="kopyala('Terk edilmiş bir lunaparkta geçen bir korku hikayesi için kısa bir giriş ve atmosfer tanımı yap.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gelecekteki bir evcil hayvan robotunun insanlarla olan etkileşimlerini anlatan esprili bir senaryo fikirleri listesi oluştur.</p>
+                <button onclick="kopyala('Gelecekteki bir evcil hayvan robotunun insanlarla olan etkileşimlerini anlatan esprili bir senaryo fikirleri listesi oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir müzik aletinin, kendisini çalan kişinin ruh halini değiştirebildiği bir fantastik öykü taslağı yaz.</p>
+                <button onclick="kopyala('Bir müzik aletinin, kendisini çalan kişinin ruh halini değiştirebildiği bir fantastik öykü taslağı yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir felsefi deneme için "insanlığın geleceği yapay zeka ile nasıl şekillenecek?" sorusunu irdeleyen bir paragraf yaz.</p>
+                <button onclick="kopyala('Bir felsefi deneme için "insanlığın geleceği yapay zeka ile nasıl şekillenecek?" sorusunu irdeleyen bir paragraf yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gizemli bir kutuyu açtıktan sonra hayatı değişen bir karakterin hikayesini anlat.</p>
+                <button onclick="kopyala('Gizemli bir kutuyu açtıktan sonra hayatı değişen bir karakterin hikayesini anlat.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sıradan bir insanın, tesadüfen bir süper güce sahip olmasını ve bu gücü ilk kez kullanışını detaylandır.</p>
+                <button onclick="kopyala('Sıradan bir insanın, tesadüfen bir süper güce sahip olmasını ve bu gücü ilk kez kullanışını detaylandır.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir şehrin gizli bir geçidini keşfeden maceracı bir grubun hikayesini anlat.</p>
+                <button onclick="kopyala('Bir şehrin gizli bir geçidini keşfeden maceracı bir grubun hikayesini anlat.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>🎨 Görsel Prompt'lar (Midjourney, DALL-E, Stable Diffusion vb. için) (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Siberpunk bir şehrin silüeti, yağmurlu, neon ışıkları, yansıyan sokaklar, detaylı, 8K.</p>
+                <button onclick="kopyala('Siberpunk bir şehrin silüeti, yağmurlu, neon ışıkları, yansıyan sokaklar, detaylı, 8K.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Fantastik bir orman, parlayan mantarlar, mistik sis, eski ağaçlar, gerçekçi ışıklandırma, ultra detaylı.</p>
+                <button onclick="kopyala('Fantastik bir orman, parlayan mantarlar, mistik sis, eski ağaçlar, gerçekçi ışıklandırma, ultra detaylı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir robot şefin gurme yemekler hazırladığı komik bir sahne, çizgi film stili, canlı renkler.</p>
+                <button onclick="kopyala('Bir robot şefin gurme yemekler hazırladığı komik bir sahne, çizgi film stili, canlı renkler.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Antik Mısır piramitlerinin üzerinde uçan fütüristik uzay gemileri, kum fırtınası, dramatik ışıklandırma, film posteri kalitesi.</p>
+                <button onclick="kopyala('Antik Mısır piramitlerinin üzerinde uçan fütüristik uzay gemileri, kum fırtınası, dramatik ışıklandırma, film posteri kalitesi.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir uzaylı bahçıvanın, Mars'ta sıra dışı bitkiler yetiştirdiği sürreal bir manzara, pastel tonlar, fantastik.</p>
+                <button onclick="kopyala('Bir uzaylı bahçıvanın, Mars\'ta sıra dışı bitkiler yetiştirdiği sürreal bir manzara, pastel tonlar, fantastik.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Büyülü bir kütüphane, raflarda uçan kitaplar, pencerelerden gelen ışık huzmeleri, detaylı, atmosferik.</p>
+                <button onclick="kopyala('Büyülü bir kütüphane, raflarda uçan kitaplar, pencerelerden gelen ışık huzmeleri, detaylı, atmosferik.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir kedi, astronot kıyafeti giymiş, ayda oturmuş dünyayı izliyor, sevimli, fotogerçekçi.</p>
+                <button onclick="kopyala('Bir kedi, astronot kıyafeti giymiş, ayda oturmuş dünyayı izliyor, sevimli, fotogerçekçi.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gotik bir şato, sisli bir vadide, dolunay, yıldırım, korkutucu ama sanatsal, karanlık.</p>
+                <button onclick="kopyala('Gotik bir şato, sisli bir vadide, dolunay, yıldırım, korkutucu ama sanatsal, karanlık.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Suyun altında batık bir şehir, antik kalıntılar, ışık huzmeleri, su altı canlıları, detaylı, 8K.</p>
+                <button onclick="kopyala('Suyun altında batık bir şehir, antik kalıntılar, ışık huzmeleri, su altı canlıları, detaylı, 8K.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir ejderha, bir dağın tepesinde gün batımına karşı süzülüyor, epik, fantastik sanat, altın oran.</p>
+                <button onclick="kopyala('Bir ejderha, bir dağın tepesinde gün batımına karşı süzülüyor, epik, fantastik sanat, altın oran.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gelecekten gelen bir araba tasarımı, aerodinamik, parlak yüzeyler, bilim kurgu, fotogerçekçi.</p>
+                <button onclick="kopyala('Gelecekten gelen bir araba tasarımı, aerodinamik, parlak yüzeyler, bilim kurgu, fotogerçekçi.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir robot ressamın, tuval üzerinde soyut bir başyapıt yarattığı, hareketli fırça darbeleri, yağlı boya efekti.</p>
+                <button onclick="kopyala('Bir robot ressamın, tuval üzerinde soyut bir başyapıt yarattığı, hareketli fırça darbeleri, yağlı boya efekti.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Buzdan yapılmış bir ormanda parlayan kristaller ve donmuş şelaleler, mistik, soğuk tonlar, detaylı.</p>
+                <button onclick="kopyala('Buzdan yapılmış bir ormanda parlayan kristaller ve donmuş şelaleler, mistik, soğuk tonlar, detaylı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir şehirde binaların çatılarından sarkan devasa bitkiler, doğa ve şehir karışımı, sanatsal, post-apokaliptik.</p>
+                <button onclick="kopyala('Bir şehirde binaların çatılarından sarkan devasa bitkiler, doğa ve şehir karışımı, sanatsal, post-apokaliptik.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir astronotun gözünden dünyanın uzaydan görünüşü, yıldızlar, galaksiler, ultra yüksek çözünürlük.</p>
+                <button onclick="kopyala('Bir astronotun gözünden dünyanın uzaydan görünüşü, yıldızlar, galaksiler, ultra yüksek çözünürlük.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Doğal unsurların (su, toprak, hava, ateş) birleştiği soyut bir sanat eseri, canlı renkler, dinamik.</p>
+                <button onclick="kopyala('Doğal unsurların (su, toprak, hava, ateş) birleştiği soyut bir sanat eseri, canlı renkler, dinamik.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir kitap kurdunun devasa bir kütüphanede okuduğu fantastik bir manzara, ışık huzmesi, detaylı.</p>
+                <button onclick="kopyala('Bir kitap kurdunun devasa bir kütüphanede okuduğu fantastik bir manzara, ışık huzmesi, detaylı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Geleneksel Türk mimarisi ile modern teknolojinin harmanlandığı bir şehir manzarası, öğlen ışığı, detaylı.</p>
+                <button onclick="kopyala('Geleneksel Türk mimarisi ile modern teknolojinin harmanlandığı bir şehir manzarası, öğlen ışığı, detaylı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir uzay istasyonunda pencereden görünen galaksi, yıldızlar, uzay gemileri, atmosferik, karanlık ama ışıklı.</p>
+                <button onclick="kopyala('Bir uzay istasyonunda pencereden görünen galaksi, yıldızlar, uzay gemileri, atmosferik, karanlık ama ışıklı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Kışın karlı bir ormanda parlayan ışıklı hayvanlar, mistik, soğuk tonlar, büyülü atmosfer.</p>
+                <button onclick="kopyala('Kışın karlı bir ormanda parlayan ışıklı hayvanlar, mistik, soğuk tonlar, büyülü atmosfer.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>💡 İş & Pazarlama Prompt'ları (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Yeni bir çevre dostu temizlik ürününün lansmanı için etkileyici bir sosyal medya reklam metni oluştur.</p>
+                <button onclick="kopyala('Yeni bir çevre dostu temizlik ürününün lansmanı için etkileyici bir sosyal medya reklam metni oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir e-ticaret sitesi için "satın alma kararını hızlandıran" 5 kısa ve ikna edici ürün açıklaması yaz.</p>
+                <button onclick="kopyala('Bir e-ticaret sitesi için "satın alma kararını hızlandıran" 5 kısa ve ikna edici ürün açıklaması yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Küçük bir kafe için müşteri sadakatini artıracak 3 yaratıcı pazarlama fikri geliştir.</p>
+                <button onclick="kopyala('Küçük bir kafe için müşteri sadakatini artıracak 3 yaratıcı pazarlama fikri geliştir.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>İş yerinde verimliliği artırmak için kullanılabilecek 10 pratik ipucu içeren bir blog yazısı taslağı hazırla.</p>
+                <button onclick="kopyala('İş yerinde verimliliği artırmak için kullanılabilecek 10 pratik ipucu içeren bir blog yazısı taslağı hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yeni başlayan bir yazılım şirketi için yatırımcılara yönelik kısa ve öz bir asansör konuşması metni yaz.</p>
+                <button onclick="kopyala('Yeni başlayan bir yazılım şirketi için yatırımcılara yönelik kısa ve öz bir asansör konuşması metni yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Dijital pazarlama trendleri hakkında bilgilendirici bir e-posta bülteninin ilk taslağını oluştur.</p>
+                <button onclick="kopyala('Dijital pazarlama trendleri hakkında bilgilendirici bir e-posta bülteninin ilk taslağını oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir danışmanlık firması için "geleceğin iş modelleri" konulu bir webinar tanıtım metni yaz.</p>
+                <button onclick="kopyala('Bir danışmanlık firması için "geleceğin iş modelleri" konulu bir webinar tanıtım metni yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yapay zekanın iş dünyasındaki etik sorunları üzerine bir tartışma metni hazırla.</p>
+                <button onclick="kopyala('Yapay zekanın iş dünyasındaki etik sorunları üzerine bir tartışma metni hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir fitness uygulamasının lansmanı için hedef kitlesini motive edecek 3 farklı reklam başlığı öner.</p>
+                <button onclick="kopyala('Bir fitness uygulamasının lansmanı için hedef kitlesini motive edecek 3 farklı reklam başlığı öner.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Müşteri hizmetleri departmanı için "zorlu müşteri" senaryosunda kullanılabilecek nazik ama kararlı 5 yanıt taslağı yaz.</p>
+                <button onclick="kopyala('Müşteri hizmetleri departmanı için "zorlu müşteri" senaryosunda kullanılabilecek nazik ama kararlı 5 yanıt taslağı yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir şirket blogu için "uzaktan çalışmanın avantajları ve dezavantajları" konulu bir makale outline'ı oluştur.</p>
+                <button onclick="kopyala('Bir şirket blogu için "uzaktan çalışmanın avantajları ve dezavantajları" konulu bir makale outline\'ı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir ürünün beta test kullanıcılarından geri bildirim almak için nazik ve teşvik edici bir e-posta taslağı yaz.</p>
+                <button onclick="kopyala('Bir ürünün beta test kullanıcılarından geri bildirim almak için nazik ve teşvik edici bir e-posta taslağı yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>İK departmanı için "çalışan motivasyonunu artırma" konusunda 5 yeni fikir sunan bir iç memo hazırla.</p>
+                <button onclick="kopyala('İK departmanı için "çalışan motivasyonunu artırma" konusunda 5 yeni fikir sunan bir iç memo hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yeni bir girişim için akılda kalıcı ve anlamlı 10 adet marka sloganı öner.</p>
+                <button onclick="kopyala('Yeni bir girişim için akılda kalıcı ve anlamlı 10 adet marka sloganı öner.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir sosyal medya kampanyası için "sürdürülebilir yaşam" temalı 3 farklı hashtag ve kısa açıklama önerisi.</p>
+                <button onclick="kopyala('Bir sosyal medya kampanyası için "sürdürülebilir yaşam" temalı 3 farklı hashtag ve kısa açıklama önerisi.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir finansal danışmanlık web sitesi için "gençler için bütçe yapma ipuçları" konulu bir makalenin ilk paragrafını yaz.</p>
+                <button onclick="kopyala('Bir finansal danışmanlık web sitesi için "gençler için bütçe yapma ipuçları" konulu bir makalenin ilk paragrafını yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir eğitim platformu için "online öğrenmenin faydaları"nı vurgulayan bir tanıtım metni hazırla.</p>
+                <button onclick="kopyala('Bir eğitim platformu için "online öğrenmenin faydaları"nı vurgulayan bir tanıtım metni hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir gayrimenkul firması için lüks bir dairenin satış metnini, dikkat çekici ve etkileyici bir dille yaz.</p>
+                <button onclick="kopyala('Bir gayrimenkul firması için lüks bir dairenin satış metnini, dikkat çekici ve etkileyici bir dille yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir teknoloji konferansı için "AI ve Gelecek" konulu bir açılış konuşmasının ana hatlarını oluştur.</p>
+                <button onclick="kopyala('Bir teknoloji konferansı için "AI ve Gelecek" konulu bir açılış konuşmasının ana hatlarını oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir restorana gelen eleştirel bir yorum için profesyonel ve çözüm odaklı bir yanıt taslağı yaz.</p>
+                <button onclick="kopyala('Bir restorana gelen eleştirel bir yorum için profesyonel ve çözüm odaklı bir yanıt taslağı yaz.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>📚 Eğitim & Öğrenme Prompt'ları (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Öğrenciler için "Antik Yunan Felsefesinin Günümüzdeki Yeri" konulu bir deneme ana hatları oluştur.</p>
+                <button onclick="kopyala('Öğrenciler için "Antik Yunan Felsefesinin Günümüzdeki Yeri" konulu bir deneme ana hatları oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Fen bilgisi dersi için "Fotosentez Süreci"ni 8 yaşındaki bir çocuğa anlatacak basit ve eğlenceli bir açıklama yaz.</p>
+                <button onclick="kopyala('Fen bilgisi dersi için "Fotosentez Süreci"ni 8 yaşındaki bir çocuğa anlatacak basit ve eğlenceli bir açıklama yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Tarih dersi için "Sanayi Devrimi'nin Sosyal Hayata Etkileri" hakkında 5 maddelik bir özet hazırla.</p>
+                <button onclick="kopyala('Tarih dersi için "Sanayi Devrimi\'nin Sosyal Hayata Etkileri" hakkında 5 maddelik bir özet hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Coğrafya dersi için "Volkanik Faaliyetler ve Oluşumları" konusunda bir sunumun giriş kısmını yaz.</p>
+                <button onclick="kopyala('Coğrafya dersi için "Volkanik Faaliyetler ve Oluşumları" konusunda bir sunumun giriş kısmını yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yabancı dil öğrenenler için "Günlük Hayatta En Çok Kullanılan 10 Deyim" listesi ve anlamlarını ver.</p>
+                <button onclick="kopyala('Yabancı dil öğrenenler için "Günlük Hayatta En Çok Kullanılan 10 Deyim" listesi ve anlamlarını ver.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Matematik dersi için "Pitagor Teoremi"ni gerçek hayattan bir örnekle açıklayan kısa bir metin yaz.</p>
+                <button onclick="kopyala('Matematik dersi için "Pitagor Teoremi"ni gerçek hayattan bir örnekle açıklayan kısa bir metin yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir biyoloji projesi için "DNA'nın Yapısı ve Görevleri" hakkında temel bilgileri özetle.</p>
+                <button onclick="kopyala('Bir biyoloji projesi için "DNA\'nın Yapısı ve Görevleri" hakkında temel bilgileri özetle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Edebiyat dersi için "Klasik Romanların Günümüz Edebiyatına Etkisi" konulu bir tez cümlesi ve argümanları oluştur.</p>
+                <button onclick="kopyala('Edebiyat dersi için "Klasik Romanların Günümüz Edebiyatına Etkisi" konulu bir tez cümlesi ve argümanları oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Çocuklar için "Gezegenler ve Güneş Sistemi"ni anlatan eğlenceli ve interaktif bir hikaye taslağı hazırla.</p>
+                <button onclick="kopyala('Çocuklar için "Gezegenler ve Güneş Sistemi"ni anlatan eğlenceli ve interaktif bir hikaye taslağı hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir online kurs için "Python Programlama Temelleri" dersinin ilk modülü için konu başlıkları ve kısa açıklamalar yaz.</p>
+                <button onclick="kopyala('Bir online kurs için "Python Programlama Temelleri" dersinin ilk modülü için konu başlıkları ve kısa açıklamalar yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Fizik dersi için "Kütle Çekim Kanunu"nu açıklayan bir Soru-Cevap formatında metin oluştur.</p>
+                <button onclick="kopyala('Fizik dersi için "Kütle Çekim Kanunu"nu açıklayan bir Soru-Cevap formatında metin oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Müzik teorisi hakkında yeni başlayanlar için "Temel Notalar ve Süreleri"ni anlatan basit bir rehber yaz.</p>
+                <button onclick="kopyala('Müzik teorisi hakkında yeni başlayanlar için "Temel Notalar ve Süreleri"ni anlatan basit bir rehber yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sanat tarihi dersi için "Rönesans Dönemi Sanatçıları ve Eserleri" hakkında 3 önemli maddede bilgi ver.</p>
+                <button onclick="kopyala('Sanat tarihi dersi için "Rönesans Dönemi Sanatçıları ve Eserleri" hakkında 3 önemli maddede bilgi ver.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Psikoloji dersi için "İnsan Beyninin Gizemleri" hakkında ilgi çekici bir tanıtım metni yaz.</p>
+                <button onclick="kopyala('Psikoloji dersi için "İnsan Beyninin Gizemleri" hakkında ilgi çekici bir tanıtım metni yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir ilkokul etkinliği için "Suyu Korumanın Önemi" konulu bir senaryo taslağı oluştur.</p>
+                <button onclick="kopyala('Bir ilkokul etkinliği için "Suyu Korumanın Önemi" konulu bir senaryo taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Felsefe dersi için "Varoluşçuluk Felsefesinin Temel İlkeleri"ni açıklayan kısa bir özet.</p>
+                <button onclick="kopyala('Felsefe dersi için "Varoluşçuluk Felsefesinin Temel İlkeleri"ni açıklayan kısa bir özet.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bilgisayar bilimi dersi için "Algoritma Nedir ve Neden Önemlidir?" sorusuna yanıt veren bir açıklama.</p>
+                <button onclick="kopyala('Bilgisayar bilimi dersi için "Algoritma Nedir ve Neden Önemlidir?" sorusuna yanıt veren bir açıklama.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sağlık eğitimi için "Dengeli Beslenmenin Faydaları" hakkında motive edici bir broşür metni yaz.</p>
+                <button onclick="kopyala('Sağlık eğitimi için "Dengeli Beslenmenin Faydaları" hakkında motive edici bir broşür metni yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Ekonomi dersi için "Enflasyon ve Deflasyon Arasındaki Fark"ı basit örneklerle açıkla.</p>
+                <button onclick="kopyala('Ekonomi dersi için "Enflasyon ve Deflasyon Arasındaki Fark"ı basit örneklerle açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Çocuklar için "Dünya'yı Keşfedin" temalı bir gezi rehberi taslağı oluştur, anahtar kelimelerle.</p>
+                <button onclick="kopyala('Çocuklar için "Dünya\'yı Keşfedin" temalı bir gezi rehberi taslağı oluştur, anahtar kelimelerle.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>🧠 Kişisel Gelişim & Yaratıcılık Prompt'ları (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Günlük meditasyon pratiği için 5 dakikalık rehberli bir meditasyon metni yaz.</p>
+                <button onclick="kopyala('Günlük meditasyon pratiği için 5 dakikalık rehberli bir meditasyon metni yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Prokrastinasyonla mücadele etmek için 7 pratik adım içeren bir motivasyon yazısı taslağı oluştur.</p>
+                <button onclick="kopyala('Prokrastinasyonla mücadele etmek için 7 pratik adım içeren bir motivasyon yazısı taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>"Başarısızlık bir son değil, bir başlangıçtır" teması üzerine ilham verici bir kısa konuşma metni yaz.</p>
+                <button onclick="kopyala('Başarısızlık bir son değil, bir başlangıçtır" teması üzerine ilham verici bir kısa konuşma metni yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yeni bir hobiye başlamak isteyenlere yönelik "Hobilerin Hayatımıza Katkıları" üzerine bir blog yazısı hazırla.</p>
+                <button onclick="kopyala('Yeni bir hobiye başlamak isteyenlere yönelik "Hobilerin Hayatımıza Katkıları" üzerine bir blog yazısı hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Daha iyi bir uyku için 5 etkili ipucu ve kısa açıklamalarını içeren bir liste oluştur.</p>
+                <button onclick="kopyala('Daha iyi bir uyku için 5 etkili ipucu ve kısa açıklamalarını içeren bir liste oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gelecek 5 yıl için kişisel hedefler belirleme konusunda yol gösterici bir kılavuz taslağı yaz.</p>
+                <button onclick="kopyala('Gelecek 5 yıl için kişisel hedefler belirleme konusunda yol gösterici bir kılavuz taslağı yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Stres yönetimi için kullanılabilecek 3 farklı pratik tekniği detaylıca açıkla.</p>
+                <button onclick="kopyala('Stres yönetimi için kullanılabilecek 3 farklı pratik tekniği detaylıca açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>"Dijital Detoks"un faydaları ve nasıl yapılacağına dair bir rehberin ilk paragrafını yaz.</p>
+                <button onclick="kopyala('Dijital Detoks"un faydaları ve nasıl yapılacağına dair bir rehberin ilk paragrafını yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Özgüveni artırmak için günlük olarak uygulanabilecek 4 basit pratik öner.</p>
+                <button onclick="kopyala('Özgüveni artırmak için günlük olarak uygulanabilecek 4 basit pratik öner.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Pozitif düşünme alışkanlığı kazanmak için bir başlangıç rehberi taslağı oluştur.</p>
+                <button onclick="kopyala('Pozitif düşünme alışkanlığı kazanmak için bir başlangıç rehberi taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yeni bir dil öğrenmeye başlamak için 5 motive edici neden ve ilk adımları açıkla.</p>
+                <button onclick="kopyala('Yeni bir dil öğrenmeye başlamak için 5 motive edici neden ve ilk adımları açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sabah rutinini daha verimli hale getirmek için 3 yaratıcı fikir öner.</p>
+                <button onclick="kopyala('Sabah rutinini daha verimli hale getirmek için 3 yaratıcı fikir öner.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yaratıcı tıkanıklığı aşmak için kullanılabilecek 5 farklı teknik listele.</p>
+                <button onclick="kopyala('Yaratıcı tıkanıklığı aşmak için kullanılabilecek 5 farklı teknik listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>"Minimalist Yaşam Tarzı"nın faydaları ve nasıl uygulanacağına dair kısa bir tanıtım yazısı yaz.</p>
+                <button onclick="kopyala('Minimalist Yaşam Tarzı"nın faydaları ve nasıl uygulanacağına dair kısa bir tanıtım yazısı yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Empati yeteneğini geliştirmek için 3 pratik egzersiz öner.</p>
+                <button onclick="kopyala('Empati yeteneğini geliştirmek için 3 pratik egzersiz öner.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Daha iyi bir dinleyici olmak için uygulanabilecek 5 altın kuralı açıkla.</p>
+                <button onclick="kopyala('Daha iyi bir dinleyici olmak için uygulanabilecek 5 altın kuralı açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Finansal okuryazarlığı geliştirmek için başlangıç seviyesi 4 ipucu ver.</p>
+                <button onclick="kopyala('Finansal okuryazarlığı geliştirmek için başlangıç seviyesi 4 ipucu ver.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Zaman yönetiminde zorlananlar için 3 farklı popüler tekniği (örneğin Pomodoro) özetle.</p>
+                <button onclick="kopyala('Zaman yönetiminde zorlananlar için 3 farklı popüler tekniği (örneğin Pomodoro) özetle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir alışkanlığı kalıcı hale getirmek için 5 adımlık bir plan taslağı oluştur.</p>
+                <button onclick="kopyala('Bir alışkanlığı kalıcı hale getirmek için 5 adımlık bir plan taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>"Şükran Duyma Günlüğü" tutmanın faydaları ve nasıl başlanacağına dair bir açıklama yaz.</p>
+                <button onclick="kopyala('Şükran Duyma Günlüğü" tutmanın faydaları ve nasıl başlanacağına dair bir açıklama yaz.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>💬 Sohbet Robotu & Asistan Prompt'ları (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Bir kahve dükkanı sohbet robotu için, müşterilerin sipariş verirken kullanabileceği 5 soru örneği oluştur.</p>
+                <button onclick="kopyala('Bir kahve dükkanı sohbet robotu için, müşterilerin sipariş verirken kullanabileceği 5 soru örneği oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Hava durumu asistanı için "bugün hava nasıl?" sorusuna verilecek 3 farklı yaratıcı ve bilgilendirici yanıt yaz.</p>
+                <button onclick="kopyala('Hava durumu asistanı için "bugün hava nasıl?" sorusuna verilecek 3 farklı yaratıcı ve bilgilendirici yanıt yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir seyahat asistanı için, kullanıcının bütçesine göre tatil yeri önerileri sunarken sorulabilecek 3 anahtar soru belirle.</p>
+                <button onclick="kopyala('Bir seyahat asistanı için, kullanıcının bütçesine göre tatil yeri önerileri sunarken sorulabilecek 3 anahtar soru belirle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Müşteri hizmetleri sohbet robotu için, "ürünüm bozuk" şikayetine verilecek ilk 2 otomatik yanıtı hazırla.</p>
+                <button onclick="kopyala('Müşteri hizmetleri sohbet robotu için, "ürünüm bozuk" şikayetine verilecek ilk 2 otomatik yanıtı hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir yemek tarifi botu için, kullanıcının elindeki malzemelerle yapılabilecek 3 farklı tarif önerirken kullanacağı giriş cümlesini yaz.</p>
+                <button onclick="kopyala('Bir yemek tarifi botu için, kullanıcının elindeki malzemelerle yapılabilecek 3 farklı tarif önerirken kullanacağı giriş cümlesini yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir eğlence asistanı için, "hafta sonu ne yapmalıyım?" sorusuna yönelik film, kitap ve aktivite önerileri sunan bir yanıt taslağı.</p>
+                <button onclick="kopyala('Bir eğlence asistanı için, "hafta sonu ne yapmalıyım?" sorusuna yönelik film, kitap ve aktivite önerileri sunan bir yanıt taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Akıllı ev asistanı için, "iyi geceler" komutuna verilecek sıcak ve kişiselleştirilmiş 3 farklı yanıt.</p>
+                <button onclick="kopyala('Akıllı ev asistanı için, "iyi geceler" komutuna verilecek sıcak ve kişiselleştirilmiş 3 farklı yanıt.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir dil öğrenme botu için, kullanıcının "nasılsın?" sorusuna farklı dillerde (İngilizce, Almanca, İspanyolca) yanıt verme komutunu yaz.</p>
+                <button onclick="kopyala('Bir dil öğrenme botu için, kullanıcının "nasılsın?" sorusuna farklı dillerde (İngilizce, Almanca, İspanyolca) yanıt verme komutunu yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Finansal danışmanlık botu için "para biriktirme ipuçları" hakkında kısa ve etkili 3 öneri listele.</p>
+                <button onclick="kopyala('Finansal danışmanlık botu için "para biriktirme ipuçları" hakkında kısa ve etkili 3 öneri listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir haber özetleme botu için, "son dakika haberleri" komutuna verilecek 5 ana başlık ve birer cümlelik özet taslağı.</p>
+                <button onclick="kopyala('Bir haber özetleme botu için, "son dakika haberleri" komutuna verilecek 5 ana başlık ve birer cümlelik özet taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Fitness takip asistanı için "günün antrenmanını tamamladın mı?" sorusuna pozitif geri bildirim veren bir yanıt yaz.</p>
+                <button onclick="kopyala('Fitness takip asistanı için "günün antrenmanını tamamladın mı?" sorusuna pozitif geri bildirim veren bir yanıt yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir "kahvaltıcı abi" için, müşterilere "günaydın" deyip, günün spesiyalini ve bir esprisini sunan bir diyalog yaz.</p>
+                <button onclick="kopyala('Bir "kahvaltıcı abi" için, müşterilere "günaydın" deyip, günün spesiyalini ve bir esprisini sunan bir diyalog yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>The fruit lady" için, müşteriye en taze meyveleri önerirken kullanacağı 3 farklı ikna edici cümle oluştur.</p>
+                <button onclick="kopyala('The fruit lady" için, müşteriye en taze meyveleri önerirken kullanacağı 3 farklı ikna edici cümle oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir eğitim botu için, kullanıcının yanlış bir cevaba verdiği durumda teşvik edici ve doğru yönlendiren bir geri bildirim metni.</p>
+                <button onclick="kopyala('Bir eğitim botu için, kullanıcının yanlış bir cevaba verdiği durumda teşvik edici ve doğru yönlendiren bir geri bildirim metni.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir müzik öneri botu için, kullanıcının ruh haline göre şarkı listesi oluştururken sorulabilecek 3 soru taslağı.</p>
+                <button onclick="kopyala('Bir müzik öneri botu için, kullanıcının ruh haline göre şarkı listesi oluştururken sorulabilecek 3 soru taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir programlama yardımcısı için, "Python'da liste nasıl tanımlanır?" sorusuna basit ve anlaşılır bir örnekle yanıt ver.</p>
+                <button onclick="kopyala('Bir programlama yardımcısı için, "Python\'da liste nasıl tanımlanır?" sorusuna basit ve anlaşılır bir örnekle yanıt ver.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir oyun botu için, "taş-kağıt-makas" oyununda kullanıcının hamlesine göre verilecek esprili 3 farklı yanıt.</p>
+                <button onclick="kopyala('Bir oyun botu için, "taş-kağıt-makas" oyununda kullanıcının hamlesine göre verilecek esprili 3 farklı yanıt.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir randevu ayarlama botu için, toplantı saatini onaylama ve iptal etme durumları için otomatik mesaj taslakları yaz.</p>
+                <button onclick="kopyala('Bir randevu ayarlama botu için, toplantı saatini onaylama ve iptal etme durumları için otomatik mesaj taslakları yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir sağlık asistanı için "su içmelisin" hatırlatmasını daha motive edici ve eğlenceli hale getiren 3 farklı cümle.</p>
+                <button onclick="kopyala('Bir sağlık asistanı için "su içmelisin" hatırlatmasını daha motive edici ve eğlenceli hale getiren 3 farklı cümle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir genel bilgi botu için, "Einstein kimdir?" sorusuna 3 cümlelik öz bir yanıt ver.</p>
+                <button onclick="kopyala('Bir genel bilgi botu için, "Einstein kimdir?" sorusuna 3 cümlelik öz bir yanıt ver.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>🛠️ Kodlama & Teknik Prompt'lar (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Python'da bir liste içindeki en büyük sayıyı bulan bir fonksiyon yaz.</p>
+                <button onclick="kopyala('Python\'da bir liste içindeki en büyük sayıyı bulan bir fonksiyon yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>JavaScript'te bir HTML elementine tıklama olayı nasıl eklenir? Örnek kod ile açıkla.</p>
+                <button onclick="kopyala('JavaScript\'te bir HTML elementine tıklama olayı nasıl eklenir? Örnek kod ile açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>CSS'te bir öğeyi yatay ve dikey olarak ortalamanın en iyi yolu nedir? Kod örneğiyle göster.</p>
+                <button onclick="kopyala('CSS\'te bir öğeyi yatay ve dikey olarak ortalamanın en iyi yolu nedir? Kod örneğiyle göster.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>SQL'de iki tabloyu birleştirmek (JOIN) için basit bir örnek sorgu yaz.</p>
+                <button onclick="kopyala('SQL\'de iki tabloyu birleştirmek (JOIN) için basit bir örnek sorgu yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Veri bilimi projesi için "Titanic veri setindeki eksik değerleri nasıl işlersin?" adım adım açıkla.</p>
+                <button onclick="kopyala('Veri bilimi projesi için "Titanic veri setindeki eksik değerleri nasıl işlersin?" adım adım açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Git'te bir branch oluşturup ona geçiş yapma komutlarını ver.</p>
+                <button onclick="kopyala('Git\'te bir branch oluşturup ona geçiş yapma komutlarını ver.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>React Native'de basit bir "Merhaba Dünya" uygulaması için kod taslağı oluştur.</p>
+                <button onclick="kopyala('React Native\'de basit bir "Merhaba Dünya" uygulaması için kod taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Docker nedir ve bir Node.js uygulamasını nasıl Dockerize edersin? Kısa bir açıklama yap.</p>
+                <button onclick="kopyala('Docker nedir ve bir Node.js uygulamasını nasıl Dockerize edersin? Kısa bir açıklama yap.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Makine öğrenmesinde "Overfitting" nedir ve nasıl önlenir? Basit bir dille açıkla.</p>
+                <button onclick="kopyala('Makine öğrenmesinde "Overfitting" nedir ve nasıl önlenir? Basit bir dille açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>RESTful API tasarımı için 3 temel prensibi listeleyip kısaca açıkla.</p>
+                <button onclick="kopyala('RESTful API tasarımı için 3 temel prensibi listeleyip kısaca açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Cloud (bulut) bilişimin temel avantajları nelerdir? 3 ana maddeyle açıkla.</p>
+                <button onclick="kopyala('Cloud (bulut) bilişimin temel avantajları nelerdir? 3 ana maddeyle açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Siber güvenlikte "Phishing" (Oltalama) saldırısı nedir ve nasıl korunulur? Açıkla.</p>
+                <button onclick="kopyala('Siber güvenlikte "Phishing" (Oltalama) saldırısı nedir ve nasıl korunulur? Açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>SEO optimizasyonu için bir web sitesinde dikkat edilmesi gereken 5 temel maddeyi listele.</p>
+                <button onclick="kopyala('SEO optimizasyonu için bir web sitesinde dikkat edilmesi gereken 5 temel maddeyi listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Basit bir C++ programında kullanıcıdan girdi alıp ekrana yazdırma örneği göster.</p>
+                <button onclick="kopyala('Basit bir C++ programında kullanıcıdan girdi alıp ekrana yazdırma örneği göster.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Frontend ve Backend geliştirme arasındaki temel farkları açıkla.</p>
+                <button onclick="kopyala('Frontend ve Backend geliştirme arasındaki temel farkları açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Veritabanı denormalizasyonunun avantajları ve dezavantajları nelerdir?</p>
+                <button onclick="kopyala('Veritabanı denormalizasyonunun avantajları ve dezavantajları nelerdir?')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Responsive web tasarımında "Media Queries" nasıl kullanılır? Örnek bir CSS kodu parçasıyla göster.</p>
+                <button onclick="kopyala('Responsive web tasarımında "Media Queries" nasıl kullanılır? Örnek bir CSS kodu parçasıyla göster.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Blockchain teknolojisinin temel prensipleri nelerdir? Basit bir dille özetle.</p>
+                <button onclick="kopyala('Blockchain teknolojisinin temel prensipleri nelerdir? Basit bir dille özetle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir web API'sinden veri çekmek için JavaScript'te `fetch` fonksiyonu nasıl kullanılır? Kısa bir örnek.</p>
+                <button onclick="kopyala('Bir web API\'sinden veri çekmek için JavaScript\'te `fetch` fonksiyonu nasıl kullanılır? Kısa bir örnek.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Test güdümlü geliştirme (TDD) nedir ve neden önemlidir? Açıkla.</p>
+                <button onclick="kopyala('Test güdümlü geliştirme (TDD) nedir ve neden önemlidir? Açıkla.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>🌐 Genel Kültür & Bilgi Prompt'ları (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Kuantum fiziğinin temel prensiplerini ortalama bir kişiye anlatacak şekilde özetle.</p>
+                <button onclick="kopyala('Kuantum fiziğinin temel prensiplerini ortalama bir kişiye anlatacak şekilde özetle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Uzay araştırmalarında son 5 yılın en önemli 3 keşfini listeleyip kısaca açıkla.</p>
+                <button onclick="kopyala('Uzay araştırmalarında son 5 yılın en önemli 3 keşfini listeleyip kısaca açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yapay zekanın günlük hayatımızdaki etik çıkarımları nelerdir? 3 farklı senaryo ile örnekle.</p>
+                <button onclick="kopyala('Yapay zekanın günlük hayatımızdaki etik çıkarımları nelerdir? 3 farklı senaryo ile örnekle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Küresel ısınmayla mücadelede bireysel olarak yapabileceğimiz 5 şeyi listele.</p>
+                <button onclick="kopyala('Küresel ısınmayla mücadelede bireysel olarak yapabileceğimiz 5 şeyi listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Dünya üzerindeki en eski uygarlık hangisidir ve neden önemlidir? Kısa bir bilgi ver.</p>
+                <button onclick="kopyala('Dünya üzerindeki en eski uygarlık hangisidir ve neden önemlidir? Kısa bir bilgi ver.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yapay zekanın sanata ve müziğe etkilerini tartışan kısa bir metin yaz.</p>
+                <button onclick="kopyala('Yapay zekanın sanata ve müziğe etkilerini tartışan kısa bir metin yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Modern çağın en büyük icatları nelerdir ve neden önemlidirler? En iyi 3'ü listele.</p>
+                <button onclick="kopyala('Modern çağın en büyük icatları nelerdir ve neden önemlidirler? En iyi 3\'ü listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Robotların gelecekteki toplumdaki rolleri hakkında bir tahmin ve olası etkileri üzerine bir paragraf yaz.</p>
+                <button onclick="kopyala('Robotların gelecekteki toplumdaki rolleri hakkında bir tahmin ve olası etkileri üzerine bir paragraf yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Türkiye'nin en önemli kültürel miraslarından 3 tanesini ve önemlerini açıkla.</p>
+                <button onclick="kopyala('Türkiye\'nin en önemli kültürel miraslarından 3 tanesini ve önemlerini açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Evrenin genişlemesi teorisini basit bir dille açıklayabilir misin?</p>
+                <button onclick="kopyala('Evrenin genişlemesi teorisini basit bir dille açıklayabilir misin?')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sosyal medyanın gençler üzerindeki olumlu ve olumsuz etkilerini tartışan bir makale taslağı.</p>
+                <button onclick="kopyala('Sosyal medyanın gençler üzerindeki olumlu ve olumsuz etkilerini tartışan bir makale taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Nörobilimdeki son gelişmelerden 2 tanesini seç ve bunların insanlık için potansiyelini açıkla.</p>
+                <button onclick="kopyala('Nörobilimdeki son gelişmelerden 2 tanesini seç ve bunların insanlık için potansiyelini açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Farklı kültürlerdeki 'misafirperverlik' anlayışını karşılaştıran kısa bir metin yaz.</p>
+                <button onclick="kopyala('Farklı kültürlerdeki \'misafirperverlik\' anlayışını karşılaştıran kısa bir metin yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Vegan beslenmenin çevreye olan etkileri hakkında 3 ana faydayı listele.</p>
+                <button onclick="kopyala('Vegan beslenmenin çevreye olan etkileri hakkında 3 ana faydayı listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yapay zeka modellerinin gelecekteki istihdam piyasasına etkileri hakkında bir tartışma metni.</p>
+                <button onclick="kopyala('Yapay zeka modellerinin gelecekteki istihdam piyasasına etkileri hakkında bir tartışma metni.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Doğadaki biyoçeşitliliği korumanın önemi ve alınabilecek 3 somut önlem.</p>
+                <button onclick="kopyala('Doğadaki biyoçeşitliliği korumanın önemi ve alınabilecek 3 somut önlem.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Antik oyunlardan günümüze popülerliğini koruyan 3 oyunu ve nedenlerini açıkla.</p>
+                <button onclick="kopyala('Antik oyunlardan günümüze popülerliğini koruyan 3 oyunu ve nedenlerini açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gezegenimizdeki en egzotik 3 hayvanı ve onları özel kılan özellikleri listele.</p>
+                <button onclick="kopyala('Gezegenimizdeki en egzotik 3 hayvanı ve onları özel kılan özellikleri listele.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Deprem anında yapılması gerekenler hakkında kısa ve bilgilendirici bir rehber yaz.</p>
+                <button onclick="kopyala('Deprem anında yapılması gerekenler hakkında kısa ve bilgilendirici bir rehber yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yenilenebilir enerji kaynaklarının gelecekteki potansiyeli hakkında kısa bir vizyon yazısı.</p>
+                <button onclick="kopyala('Yenilenebilir enerji kaynaklarının gelecekteki potansiyeli hakkında kısa bir vizyon yazısı.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>🎮 Oyun & Eğlence Prompt'ları (20 Prompt)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Yeni bir rol yapma oyunu (RPG) için 3 farklı karakter sınıfı ve yeteneklerini tanımla.</p>
+                <button onclick="kopyala('Yeni bir rol yapma oyunu (RPG) için 3 farklı karakter sınıfı ve yeteneklerini tanımla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Süper kahraman filmlerinin neden bu kadar popüler olduğunu açıklayan bir blog yazısı taslağı.</p>
+                <button onclick="kopyala('Süper kahraman filmlerinin neden bu kadar popüler olduğunu açıklayan bir blog yazısı taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir video oyununun ana düşmanı için korkutucu ve akılda kalıcı bir backstory oluştur.</p>
+                <button onclick="kopyala('Bir video oyununun ana düşmanı için korkutucu ve akılda kalıcı bir backstory oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Boş zamanlarını değerlendirmek için 5 yaratıcı ve bütçe dostu hobi önerisi sun.</p>
+                <button onclick="kopyala('Boş zamanlarını değerlendirmek için 5 yaratıcı ve bütçe dostu hobi önerisi sun.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Fantastik bir dünyada geçen bir masaüstü rol yapma oyunu (TRPG) senaryosu için ilk bölüm taslağı.</p>
+                <button onclick="kopyala('Fantastik bir dünyada geçen bir masaüstü rol yapma oyunu (TRPG) senaryosu için ilk bölüm taslağı.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>En sevdiğin 3 film karakterinin kişiliklerini ve nedenlerini analiz eden bir paragraf yaz.</p>
+                <button onclick="kopyala('En sevdiğin 3 film karakterinin kişiliklerini ve nedenlerini analiz eden bir paragraf yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir popüler video oyunundaki (örneğin Elden Ring veya Cyberpunk 2077) atmosferi 5 kelimeyle özetle.</p>
+                <button onclick="kopyala('Bir popüler video oyunundaki (örneğin Elden Ring veya Cyberpunk 2077) atmosferi 5 kelimeyle özetle.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gelecekteki e-spor turnuvaları hakkında bir haber makalesi taslağı oluştur.</p>
+                <button onclick="kopyala('Gelecekteki e-spor turnuvaları hakkında bir haber makalesi taslağı oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir korku oyununun oyuncuyu nasıl etkileyeceğini ve korku unsurlarını açıkla.</p>
+                <button onclick="kopyala('Bir korku oyununun oyuncuyu nasıl etkileyeceğini ve korku unsurlarını açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir çizgi roman karakteri için orijin hikayesi ve süper güçlerini detaylandır.</p>
+                <button onclick="kopyala('Bir çizgi roman karakteri için orijin hikayesi ve süper güçlerini detaylandır.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Oyun dünyasında AI'nın (Yapay Zeka) rolü ve gelecekteki potansiyeli hakkında bir tartışma metni.</p>
+                <button onclick="kopyala('Oyun dünyasında AI\'nın (Yapay Zeka) rolü ve gelecekteki potansiyeli hakkında bir tartışma metni.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>En sevdiğin müzik türü nedir ve neden bu kadar etkileyici bulduğunu açıkla.</p>
+                <button onclick="kopyala('En sevdiğin müzik türü nedir ve neden bu kadar etkileyici bulduğunu açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir podcast serisi için "Gizemli Kayıp Şehirler" konulu bir bölümün kısa tanıtımını yaz.</p>
+                <button onclick="kopyala('Bir podcast serisi için "Gizemli Kayıp Şehirler" konulu bir bölümün kısa tanıtımını yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir "Escape Room" senaryosu için 3 yaratıcı bulmaca fikri geliştir.</p>
+                <button onclick="kopyala('Bir "Escape Room" senaryosu için 3 yaratıcı bulmaca fikri geliştir.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Popüler bir dizinin final bölümü için alternatif bir son yaz.</p>
+                <button onclick="kopyala('Popüler bir dizinin final bölümü için alternatif bir son yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Yeni bir masa oyunu için kural kitabının ilk sayfasını taslağını oluştur.</p>
+                <button onclick="kopyala('Yeni bir masa oyunu için kural kitabının ilk sayfasını taslağını oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Video oyunlarında hikaye anlatımının önemini ve iyi bir hikayenin oyun deneyimine katkılarını açıkla.</p>
+                <button onclick="kopyala('Video oyunlarında hikaye anlatımının önemini ve iyi bir hikayenin oyun deneyimine katkılarını açıkla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir komedi filmi için absürt ve beklenmedik bir senaryo fikri geliştir.</p>
+                <button onclick="kopyala('Bir komedi filmi için absürt ve beklenmedik bir senaryo fikri geliştir.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir spor takımının maskotu için komik ve enerjik bir backstory oluştur.</p>
+                <button onclick="kopyala('Bir spor takımının maskotu için komik ve enerjik bir backstory oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sanat ve eğlence sektöründe yapay zekanın etik kullanımını tartışan kısa bir metin.</p>
+                <button onclick="kopyala('Sanat ve eğlence sektöründe yapay zekanın etik kullanımını tartışan kısa bir metin.')">Kopyala</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; background-color: #2c3e50; color: #fff; margin-top: 20px;">
+            Yapay Zeka Prompt Kütüphanesi © 2025
+        </p>
+    </footer>
+
+    <script>
+        function kopyala(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Prompt panoya kopyalandı!');
+            }, function(err) {
+                console.error('Kopyalama başarısız oldu: ', err);
+                alert('Kopyalama başarısız oldu. Lütfen manuel olarak kopyalayın.');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Güzel 100 Yapay Zeka Prompt'u</title>
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Başlık Alanı */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Ana İçerik Alanı */
+        main {
+            flex: 1;
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        /* Prompt Kartları */
+        .prompt-kapsayici {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .prompt-kart {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .prompt-kart p {
+            margin: 0 0 10px 0;
+            font-size: 0.95em;
+            color: #555;
+            word-wrap: break-word; /* Uzun kelimeleri kırmak için */
+        }
+
+        .prompt-kart button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.2s ease;
+            align-self: flex-end; /* Butonu sağ alta hizala */
+        }
+
+        .prompt-kart button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Duyuru Mesajı */
+        .duyuru-mesaji {
+            text-align: center;
+            padding: 20px;
+            background-color: #e74c3c;
+            color: white;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Ayarlar */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            main {
+                margin: 10px;
+                padding: 15px;
+            }
+            .prompt-kapsayici {
+                grid-template-columns: 1fr; /* Küçük ekranlarda tek sütun */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌟 En Güzel 100 Yapay Zeka Prompt'u 🌟</h1>
+        <p>Yaratıcılığını ateşle, yapay zekadan en iyi çıktıyı al!</p>
+    </header>
+
+    <main>
+        <div class="duyuru-mesaji">
+            <p><strong>Not:</strong> Bu web sitesi sadece bir örnektir. İçerisinde sadece birkaç prompt bulunmaktadır. Tam 100 prompt için "Prompt Listesi" bölümünü doldurmanız gerekmektedir.</p>
+        </div>
+
+        <h2>✨ Genel Prompt'lar</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Bir uzay macerası romanının ilk bölümünü yaz. Kahramanımız, kaybettiği bir antik eseri bulmak için tehlikeli bir gezegene iniş yapıyor.</p>
+                <button onclick="kopyala('Bir uzay macerası romanının ilk bölümünü yaz. Kahramanımız, kaybettiği bir antik eseri bulmak için tehlikeli bir gezegene iniş yapıyor.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Gelecekte, insanlar ve yapay zekaların bir arada yaşadığı bir dünyayı anlatan kısa bir hikaye taslağı oluştur. Konflikt noktası ne olabilir?</p>
+                <button onclick="kopyala('Gelecekte, insanlar ve yapay zekaların bir arada yaşadığı bir dünyayı anlatan kısa bir hikaye taslağı oluştur. Konflikt noktası ne olabilir?')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sosyal medyada bir influencer gibi davranan bir evcil hayvanın komik günlük maceralarını anlatan bir blog yazısı taslağı hazırla.</p>
+                <button onclick="kopyala('Sosyal medyada bir influencer gibi davranan bir evcil hayvanın komik günlük maceralarını anlatan bir blog yazısı taslağı hazırla.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Çevre kirliliği ve iklim değişikliği hakkında farkındalık yaratmak için etkileyici bir kısa kampanya sloganı ve açıklaması yaz.</p>
+                <button onclick="kopyala('Çevre kirliliği ve iklim değişikliği hakkında farkındalık yaratmak için etkileyici bir kısa kampanya sloganı ve açıklaması yaz.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Antik bir uygarlığın kayıp teknolojisini keşfeden bir arkeolog hakkında bir film senaryosu özeti oluştur.</p>
+                <button onclick="kopyala('Antik bir uygarlığın kayıp teknolojisini keşfeden bir arkeolog hakkında bir film senaryosu özeti oluştur.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sabah erken kalkan biri için motive edici, esprili ve kısa bir günlük teyit cümlesi yaz.</p>
+                <button onclick="kopyala('Sabah erken kalkan biri için motive edici, esprili ve kısa bir günlük teyit cümlesi yaz.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>🎨 Görsel Prompt'lar (Midjourney, DALL-E vb. için)</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Bir steampunk şehrinde uçan balonlar ve dişli çarklarla dolu bir gökyüzü, gün batımı renkleri, detaylı, 8k.</p>
+                <button onclick="kopyala('Bir steampunk şehrinde uçan balonlar ve dişli çarklarla dolu bir gökyüzü, gün batımı renkleri, detaylı, 8k.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Sakura ağaçlarının altında meditasyon yapan bir robot, geleneksel Japon mimarisi, loş ışıklandırma, huzurlu atmosfer, sanatsal.</p>
+                <button onclick="kopyala('Sakura ağaçlarının altında meditasyon yapan bir robot, geleneksel Japon mimarisi, loş ışıklandırma, huzurlu atmosfer, sanatsal.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Bir sincabın minyatür bir şapka takmış ve kahve yudumlarken gazete okuduğu komik bir çizim, sulu boya stili.</p>
+                <button onclick="kopyala('Bir sincabın minyatür bir şapka takmış ve kahve yudumlarken gazete okuduğu komik bir çizim, sulu boya stili.')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Su altında parlayan neon balıklar ve antik kalıntılar arasında yüzen bir dalgıç, siberpunk estetiği, karanlık ama canlı.</p>
+                <button onclick="kopyala('Su altında parlayan neon balıklar ve antik kalıntılar arasında yüzen bir dalgıç, siberpunk estetiği, karanlık ama canlı.')">Kopyala</button>
+            </div>
+        </div>
+
+        <h2>💡 Yaratıcı Prompt'lar</h2>
+        <div class="prompt-kapsayici">
+            <div class="prompt-kart">
+                <p>Bir pazarda dolaşan ve geleceği okuyabilen bir yaşlı adamın hikayesini anlat. Günlük sıradan bir olayı nasıl etkiler?</p>
+                <button onclick="kopyala('Bir pazarda dolaşan ve geleceği okuyabilen bir yaşlı adamın hikayesini anlat. Günlük sıradan bir olayı nasıl etkiler?')">Kopyala</button>
+            </div>
+            <div class="prompt-kart">
+                <p>Seslerin rengini görebilen bir müzisyenin hayatını konu alan bir senaryo özeti oluştur. Bu yetenek ona nasıl yardımcı olur veya engel olur?</p>
+                <button onclick="kopyala('Seslerin rengini görebilen bir müzisyenin hayatını konu alan bir senaryo özeti oluştur. Bu yetenek ona nasıl yardımcı olur veya engel olur?')">Kopyala</button>
+            </div>
+        </div>
+
+        <p style="text-align: center; margin-top: 40px; font-size: 0.9em; color: #777;">Daha fazla prompt eklemek için "Prompt Listesi" bölümünü genişletebilirsiniz.</p>
+    </main>
+
+    <footer>
+        <p style="text-align: center; padding: 20px; background-color: #2c3e50; color: #fff; margin-top: 20px;">
+            Yapay Zeka Prompt Kütüphanesi © 2025
+        </p>
+    </footer>
+
+    <script>
+        function kopyala(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Prompt panoya kopyalandı!');
+            }, function(err) {
+                console.error('Kopyalama başarısız oldu: ', err);
+                alert('Kopyalama başarısız oldu. Lütfen manuel olarak kopyalayın.');
+            });
+        }
+    </script>
+</body>
+</html>

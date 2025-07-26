@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yapay zeka ile içerik üretmek isteyenler için 100 ilham verici prompt.">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>100 Yapay Zeka Promptu | Prompt Kütüphanesi</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f6;
+      color: #333;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 { margin: 0; font-size: 2.5em; }
+    header p { margin-top: 10px; font-size: 1.1em; }
+    main {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+      margin-top: 30px;
+    }
+    .prompt-kapsayici {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .prompt-kart {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .prompt-kart p {
+      margin: 0 0 10px 0;
+      font-size: 0.95em;
+      color: #555;
+      overflow-wrap: break-word;
+    }
+    .prompt-kart button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.9em;
+      transition: background-color 0.2s ease;
+      align-self: flex-end;
+    }
+    .prompt-kart button:hover,
+    .prompt-kart button:focus {
+      background-color: #2980b9;
+      outline: none;
+    }
+    .duyuru-mesaji {
+      text-align: center;
+      padding: 20px;
+      background-color: #e74c3c;
+      color: white;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      main { margin: 10px; padding: 15px; }
+      .prompt-kapsayici { grid-template-columns: 1fr; }
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🌟 En Güzel 100 Yapay Zeka Prompt'u (made by chat gpt)🌟</h1>
+  <p>Yaratıcılığını ateşle, yapay zekadan en iyi çıktıyı al!</p>
+</header>
+
+<main>
+  <div class="duyuru-mesaji" role="alert">
+    <p><strong>Not:</strong> Bu sayfa toplam 100 yapay zeka prompt'u içermektedir. Her biri farklı kategorilerde gruplanmıştır.</p>
+  </div>
+
+  <!-- 1) GENEL PROMPT'LAR -->
+  <h2>✨ Genel Prompt'lar</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>Bu metni 3 farklı tonla (resmi, samimi, mizahi) yeniden yaz ve her versiyonun hedef kitlesini belirt.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir konuyu hiç bilmeyen birine anlatır gibi, [KONU] hakkında 5 yaşındaki bir çocuğun anlayacağı şekilde açıkla. Ardından lise seviyesine uygun kısa bir özet üret.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[HEDEF] için 30 günlük bir öğrenme planı çıkar. Her gün için hedef, kaynak, mini ödev ve ölçülebilir çıktı ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Şu metni (yapıştıracağım) daha kısa, sade ve ikna edici hale getir. Gereksiz tekrarları kaldır, güçlü fiiller kullan, sonuna bir CTA ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[KONU] hakkında en sık sorulan 20 soruyu (FAQ) üret ve kısa, net cevaplar ver. Soruları zorluk seviyesine göre sırala.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bana [AMAÇ] için 10 farklı çerçeve (framework) öner ve her birini bir cümleyle özetle. Hangisini ne zaman kullanmalıyım belirt.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[KONU] için “iyi, daha iyi, en iyi” yaklaşımlarını örneklerle karşılaştır ve trade-off’ları maddeler halinde yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Şu iki fikri birleştirip (Fikir 1: …, Fikir 2: …) hibrit bir çözüm öner ve artı/eksi yönlerini tablo halinde ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[KONU] alanında yapılan 5 yaygın hatayı açıkla, her hata için bir önleyici kontrol listesi çıkar ve kötü/iyi örnek ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir başlangıç rehberi yaz: [KONU]. Bölümler: Tanım, Neden Önemli, Temel Kavramlar, İlk 7 Gün Planı, Sık Yapılan Hatalar, İleri Adımlar.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 2) GÖRSEL PROMPT'LAR -->
+  <h2>🎨 Görsel Prompt'lar (Midjourney, DALL·E vb.)</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>“Retro-fütüristik bir İstanbul silüeti, neon tabelalar, sisli Boğaz, 35mm film tanesi, dramatik ışıklandırma, yüksek detay, 8k, --ar 16:9”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Gotik bir kütüphanede, kitap sayfalarından yapılmış bir ejderha, volumetrik ışık, photorealistic, ultra-detailed, --ar 3:4”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Minimalist, düz renk paletli, Bauhaus esintili bir posterde [KAVRAM] metaforu, keskin geometri, negatif alan kullanımı, vektör tarzı”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Siberpunk bir Kapalıçarşı, holografik pazarlıklar, yağmurlu zemin yansımaları, anamorphic lens flare, cinematic, --ar 21:9”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Bir kahve çekirdeğinin mikroskobik dünyası: devasa ağaçlar, küçük canlılar, makro lens, ultra sharp, high depth of field”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Rönesans tarzında portre: [KİŞİ], yağlı boya dokusu, chiaroscuro, dramatik gölgeler, müze kalitesinde”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Stüdyo kalitesinde ürün fotoğrafı: [ÜRÜN], yüzer şekilde, softbox ışık, clean background, 85mm lens bokeh, hyperrealistic”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Ortaçağ’da geçen bir bilim kurgu sahnesi: şövalyeler lazer kılıçlarıyla savaşıyor, sisli orman, dramatik kompozisyon, concept art”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Düşük poligon (low-poly) bir şehir modellemesi, pastel renkler, izometrik bakış, oyun UI için optimize”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Bir mimarlık konsepti: doğayla bütünleşik sürdürülebilir gökdelen, biyomimikri, geniş cam yüzeyler, sabah ışığı, ultra wide”.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 3) YARATICI YAZIM -->
+  <h2>💡 Yaratıcı Yazım Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>Bir karakter düşün: geçmişini tamamen unutmuş ama geleceği görebiliyor. İlk bölümde okuyucuya hiçbir açıklama yapmadan bu paradoksu hissettir.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir distopya yaz: İnsanlar gülmeyi unutmuş. Mizahı geri getirmeye çalışan yeraltı komedyenlerinin hikayesini yaz. Açılış sahnesi gergin ama komik olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir şehir günlüğü yaz: Şehir, yaşayan bir varlık gibi konuşsun ve sakinlerinin sırlarını, hayal kırıklıklarını anlatsın. 2. tekil şahıs kullan.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Zamanda yolculuk eden bir tarihçinin, tek bir küçük olayın sonuçlarını düzeltmeye çalıştığı 3 farklı alternatif tarih senaryosu yaz ve sonunda trajik bir döngü yarat.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Sadece diyaloglardan oluşan kısa bir hikaye yaz. Mekân, karakter ve duyguyu hiç betimleme kullanmadan sezdirerek aktar.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Korku türünde mikro öykü: 200 kelime, tek mekân, tek olay, tek sürpriz. Son cümle tüm metni tersine çevirsin.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir yapay zekanın, insanlar tarafından zorla ‘insanlaştırılmaya’ çalışıldığı bir sahne yaz. AI iç sesini teknik, insanları duygusal betimle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir masalı siberpunk evrene taşı: Kırmızı Başlıklı Kız ama veri kaçakçısı, kurt ise bir mega şirketin izleme algoritması.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir nesnenin (ör. bir anahtar) gözünden 50 yıl boyunca el değiştirmesini anlat. Her bölümde farklı sahibin hayatını açığa çıkar.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Şiir: “unutuş” temasını kullan. İçinde hiç fiil geçmesin, sadece isim ve sıfatlarla güçlü bir atmosfer kur.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 4) KODLAMA VE GELİŞTİRİCİ -->
+  <h2>💻 Kodlama ve Geliştirici Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>Şu kodu (yapıştıracağım) SOLID prensiplerine göre yeniden düzenle, her değişikliğin gerekçesini yorumlarda açıkla ve birim test örneği yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[DİL/FRAMEWORK] ile minimum bağımlılık içeren, 12-Factor uygulama prensiplerine uygun bir proje iskeleti öner ve klasör yapısını açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Şu fonksiyonun Big-O zaman ve alan karmaşıklığını hesapla, daha iyi bir algoritma öner ve pseudo-code ile açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir REST API için OpenAPI (Swagger) tanımı oluştur: Kaynaklar, şemalar, hata kodları, rate limiting stratejisi ve örnek istek/yanıtlar dahil olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Şu SQL sorgusunu optimize et, indeks öner, explain plan üzerinden darboğazları açıkla ve alternatif query yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir mikroservis için gözlemlenebilirlik (observability) rehberi yaz: logging, tracing, metrics, alerting, dashboard örnekleriyle birlikte.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>CI/CD pipeline’ında [Araç] kullanarak lint, test, build, security scan ve deploy aşamalarını içeren YAML örneği ver ve açıklamalar ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Framework] tabanlı bir projede Clean Architecture uygulamak için katmanlı yapı örneği ver ve bağımlılıkları ters çevirmenin faydasını açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir legacy kod parçası veriyorum. Bunu adım adım refactor etmek için bir strateji çıkar: Önce test ekle, sonra küçük adımlar, feature flag vb. önerilerle yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Dil] için yaygın güvenlik açıkları (SQLi, XSS, SSRF, CSRF, Insecure Deserialization vb.) ve örnek savunma kodlarını üret.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 5) KARİYER VE GİRİŞİMCİLİK -->
+  <h2>🚀 Kariyer ve Girişimcilik Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>CV’mi yapıştıracağım. ATS uyumlu, metriklerle güçlendirilmiş, sonuç odaklı bir versiyona dönüştür ve her maddeyi STAR metoduyla yeniden yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Pozisyon] için teknik ve davranışsal mülakat sorularını listele; her soru için iyi/orta/kötü cevap örnekleri ver ve puanlama rubriği yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir startup fikri: [Fikir]. TAM/SAM/SOM hesabı, müşteri segmentleri, JTBD analizi, rakip matrisi, gelir modelleri ve GTM planı çıkar.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>LinkedIn profilimi optimize et: Headline, “About” kısmı, deneyimler, başarı metrikleri, anahtar kelimeler. Ayrıca 10 gönderi fikri ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Rol] olarak ilk 90 gün planı hazırla: 30/60/90 gün hedefleri, hızlı kazanımlar, paydaş analizi ve iletişim ritimleri dahil olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Ürün/Hizmet] için fiyatlandırma stratejileri: maliyet+kar, değer tabanlı, psikolojik fiyatlandırma, freemium vs. Senaryolu karşılaştırma yap.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>OKR yaz: Şirket, ekip ve birey seviyesinde 3’er adet OKR öner, KR’lar ölçülebilir ve sonuç odaklı olsun. Anti-pattern’leri de yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Soğuk e-posta (cold email) şablonları: yatırımcı, müşteri ve mentor için 3’er kısa şablon yaz. Konu satırlarını A/B test edilebilir şekilde ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Dikey] için 10 niş pazar fikri öner, her biri için müşteri problemi, çözüm fikri, monetizasyon ve risk analizi yap.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Pitch deck şablonu ver: Problem, Çözüm, Pazar, Ürün, İş Modeli, Traction, Rekabet, Ekip, Finansal Projeksiyonlar, İstek (Ask) slaytlarını doldur.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 6) KİŞİSEL GELİŞİM -->
+  <h2>🧭 Kişisel Gelişim & Verimlilik Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>Hedefim: [HEDEF]. Bunu SMART ve WOOP yöntemleriyle yeniden yaz, 30-60-90 gün planı çıkar ve alışkanlık istifleme (habit stacking) önerileri ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Günlük 15 dakikalık derin çalışma rutini tasarla. Öncesi/sonrası ritüeller, dikkat dağıtıcıları engelleme yöntemleri ve takip metrikleri ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Prokrastinasyon nedenlerimi bulmam için bana 10 güçlü soru sor ve her birine vereceğim olası cevaplara göre ileri aksiyon önerileri sun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Akşam kapanış” (evening review) rutini oluştur: 5 dakikalık günlük değerlendirme, minnettarlık, öğrenilen dersler ve ertesi günün tek büyük hedefi.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bana “dopamin detoksu” için 7 günlük bir plan yaz: yapılacak/yapılmayacaklar, yerini alacak düşük dopamin aktiviteleri ve ölçüm yöntemiyle birlikte.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Hayır demeyi” öğrenmek için 10 farklı kibar, sınır koyucu ve net kalıp ver. Her biri için kullanılabilecek senaryoları yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>ADHD dostu bir görev yönetimi sistemi tasarla: görsel panolar, küçük görevler, zaman kutulama, ödül mekanizması ve otomatik tetikleyicilerle birlikte.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bana 5 dakikalık sabah, 5 dakikalık öğle ve 5 dakikalık akşam mini meditasyon/nefes rutini yaz. Amaçlarına göre nefes sayıları belirt.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Kısa, etkili öz-farkındalık günlük soruları üret: 30 gün boyunca her güne bir tane, 2 dakikada cevaplanabilir olacak şekilde yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“İçsel eleştirmen”i fark etmek ve yönetmek için CBT (Bilişsel Davranışçı Terapi) temelli bir mini çalışma defteri tasarla (sorular + örnek cevaplar).</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 7) EĞİTİM & ÖĞRENCİ -->
+  <h2>🎓 Eğitim & Öğrenci Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>[Ders/Konu] için 4 haftalık bir çalışma planı hazırla: haftalık hedefler, aktif hatırlama (active recall) soruları ve kısa quizler ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bu konuyu (yapıştıracağım) Feynman tekniği ile açıkla; önce basitçe, sonra teknik detayla, sonra tekrar basitleştirerek anlat.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bana [Konu] için 50 adet kısa flashcard üret: soru-cevap formatında, Bloom taksonomisine göre seviyelendirilmiş olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Makale ödevi yazıyorum: Bana güçlü bir tez cümlesi, karşı argümanlar, kaynak önerileri ve 5 bölümlük outline ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Sınav öncesi son 48 saat için bir tekrar stratejisi yaz: yüksek verimli konular, hızlı pratikler, kısa molalar ve uyku optimizasyonu dahil olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Konu] için analogiler üret: 10 farklı benzetme yap ve her birini ilkokul, lise ve üniversite seviyesinde yeniden açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>“Çalışırken dikkatimi dağıtan şeyler” listesine göre bir çalışma ortamı tasarla: fiziksel, dijital ve zihinsel engelleyiciler için çözümler öner.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir grup projesinde rollerin adil dağılmasını sağlamak için bir rol matrisi oluştur ve kontrol listeleriyle birlikte ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bana [Konu] için sınav tipi sorular yaz: 5 çoktan seçmeli, 3 kısa cevap, 2 uzun cevap ve 1 proje sorusu; cevap anahtarlarıyla birlikte ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Akademik bir makaleyi hızlıca analiz etmek için 10 adımlı bir “paper okuma protokolü” yaz: amaç, yöntem, katkı, sınırlılıklar, uygulanabilirlik vb.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 8) TASARIM & UX -->
+  <h2>🧩 Tasarım & UX Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>Bir SaaS uygulaması için onboarding akışını tasarla: hedef personayı tanımla, aşamaları yaz, mikro kopyaları üret ve A/B test hipotezleri ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Kritik bir form için (ödeme, kayıt vb.) UX microcopy yaz: hatalar, başarı mesajları, placeholder’lar, progress indicator ve boş durum metinleri dahil olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Heuristik değerlendirme için 10 maddelik bir kontrol listesi yaz (Nielsen ilkeleri), her birine “kötü örnek – iyi örnek” görsel tarifleri ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Kullanıcı araştırması planı oluştur: hedefler, hipotezler, sorular, yöntem (görüşme, anket, kullanım testi), analiz çerçevesi ve rapor formatıyla birlikte.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Erişilebilirlik (a11y) test planı ver: renk kontrastı, klavye navigasyonu, ARIA kullanımı, odak durumları ve ekran okuyucu senaryoları dahil olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Uygulama Türü] için bilgilendirici boş durum (empty state) metinleri ve görsel fikirleri üret. Kullanıcıyı harekete geçiren CTA’lar ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Design system dokümantasyonu yaz: tipografi, grid, renk, buton durumları, modal kuralları ve komponent API’leri (props, states) ile birlikte.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir mobil uygulama için 5 saniye testi metinleri hazırla: ana ekranı gördüğünde kullanıcı ne anladı, ne yapması gerektiğini hissetti mi gibi sorular üret.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Kullanıcı yolculuğu haritası (journey map) şablonu çıkar: aşamalar, hedefler, duygular, temas noktaları, engeller ve fırsatlarla birlikte tablo ver.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Senaryo] için 3 farklı persona oluştur ve her persona için ton, dil, içerik öncelikleri, erişilebilirlik gereksinimleri ve motivasyonları açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 9) TARİH & KÜLTÜR -->
+  <h2>📚 Tarih & Kültür Prompt'ları</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>[Tarihsel Olay] gerçekleşmemiş olsaydı dünya nasıl farklı olurdu? Politika, teknoloji, kültür ve ekonomi açısından 4 senaryo yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Dönem] döneminde yaşayan bir zanaatkârın gözünden günlük tut: ekonomik koşullar, toplumsal hiyerarşi, dini pratikler ve kişisel hayal kırıklıkları yer alsın.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>İki filozofu (ör. Aristoteles vs. Kant) [Konu] üzerinde bir tartışmada karşılaştır: temel argümanları, varsayımları ve eleştirileri yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir kültürel ritüelin (ör. Nevruz, Hac, Hanami) tarihsel gelişimini, sembollerini ve modern dünyadaki dönüşümünü inceleyen bir mini makale yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Ülke/Kültür] mutfağını, tarihsel göç hareketleri ve ticaret yolları ışığında analiz et: hangi baharatlar nereden geldi ve nasıl yerelleşti?</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir tarihsel mektubu (ör. savaş, sürgün, keşif) ilk ağızdan, duygusal ve detaylı olarak yeniden yaz. Dipnotlarla tarihsel bağlamı açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Dönem] basınında (gazete, dergi) kullanılan dil ve propaganda tekniklerini örneklerle çözümle ve günümüz sosyal medyasıyla kıyasla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Tarih boyunca “bilgiye erişim”in dönüşümünü yaz: sözlü kültür → yazı → matbaa → kütüphaneler → internet → yapay zeka. Her aşamada güç kimdeydi?</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir şehir için 24 saatlik kültürel rota hazırla: sabah müze, öğlen yerel yemek, akşam performans sanatı, gece yeraltı kültürü. Kısa notlar ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>[Yazar/Şair] eserlerindeki temel temaları (aşk, ölüm, yalnızlık, özgürlük vb.) örnek pasajlarla analiz et ve çağdaş bir yazarla ilişkilendir.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+  <!-- 10) EĞLENCELİ & MİZAHİ -->
+  <h2>😂 Eğlenceli & Mizahi Prompt'lar</h2>
+  <div class="prompt-kapsayici">
+    <div class="prompt-kart"><p>Gündelik hayattaki küçük bir problemi (ör. çorapların kaybolması) epik bir destan tarzında, kahramanlık diliyle anlat.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir yapay zekanın, insanlardan aldığı en saçma istekleri anlatan stand-up gösterisinin açılış monoloğunu yaz (3 dakika).</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>İki nesnenin tartışmasını yaz: Buzdolabı vs. Mikrodalga. Taraflar kendilerini abartılı şekilde överken komik benzetmeler yapsın.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Kariyer sitelerinde gördüğümüz abartılı ilanları parodi olarak yeniden yaz: “Junior ama 10 yıl tecrübeli” gibi absürt şartlar ekle.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Eğer kediler bir ulus olsaydı anayasaları nasıl olurdu? Maddeler halinde yaz ve her maddeyi kedisel gerekçelerle açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Modern teknolojileri Osmanlıca gibi eski bir dille anlatan kısa bir parodi metin yaz (ama günümüz terimlerini de hafif bozarak kullan).</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir ürünün (ör. kalem) Amazon yorumlarını aşırı dramatize et: Shakespeare tarzında olumlu/olumsuz 3 yorum yaz.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Sosyal medya kavramlarını (trend, algoritma, viral) Anadolu köyünde yaşlı birinin ağzından mizahi bir dille açıkla.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Bir yapay zekanın insan kaynakları departmanına gönderdiği şikayet mektubunu yaz: “Günde 1 milyon soru soruluyor, mola yok!”</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+    <div class="prompt-kart"><p>Buzdolabındaki yiyeceklerin gece toplandığı bir toplantıyı yaz: peynir, domates, gazlı içecek – herkesin karakteri farklı ve komik olsun.</p><button onclick="kopyala(this)" aria-label="Prompt'u kopyala">Kopyala</button></div>
+  </div>
+
+</main>
+
+<footer>
+  Yapay Zeka Prompt Kütüphanesi © 2025
+</footer>
+
+<script>
+  function kopyala(button) {
+    const text = button.previousElementSibling.textContent.trim();
+    navigator.clipboard.writeText(text).then(() => {
+      alert('Prompt panoya kopyalandı!');
+    }).catch(err => {
+      console.error('Kopyalama başarısız oldu:', err);
+      alert('Kopyalama başarısız oldu. Lütfen manuel olarak kopyalayın.');
+    });
+  }
+</script>
+</body>
+</html>
